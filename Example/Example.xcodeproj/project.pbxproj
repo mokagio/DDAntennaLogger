@@ -19,6 +19,7 @@
 		3F90428519702C39007BBFAF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F90426D19702C38007BBFAF /* UIKit.framework */; };
 		3F90428D19702C39007BBFAF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3F90428B19702C39007BBFAF /* InfoPlist.strings */; };
 		3F90428F19702C39007BBFAF /* ExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F90428E19702C39007BBFAF /* ExampleTests.m */; };
+		3F90429B19703187007BBFAF /* DDAntennaLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F90429A19703187007BBFAF /* DDAntennaLogger.m */; };
 		819E3A280F3849BFA8A3CB5D /* libPods-Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FF6DB6A192FF4915BB3B5B0A /* libPods-Example.a */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +50,8 @@
 		3F90428A19702C39007BBFAF /* ExampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ExampleTests-Info.plist"; sourceTree = "<group>"; };
 		3F90428C19702C39007BBFAF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3F90428E19702C39007BBFAF /* ExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExampleTests.m; sourceTree = "<group>"; };
+		3F90429919703187007BBFAF /* DDAntennaLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDAntennaLogger.h; sourceTree = "<group>"; };
+		3F90429A19703187007BBFAF /* DDAntennaLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDAntennaLogger.m; sourceTree = "<group>"; };
 		8361007814D84A0CBCA98049 /* Pods-Example.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.xcconfig"; path = "../Pods/Pods-Example.xcconfig"; sourceTree = "<group>"; };
 		FF6DB6A192FF4915BB3B5B0A /* libPods-Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -81,6 +84,7 @@
 		3F90425D19702C38007BBFAF = {
 			isa = PBXGroup;
 			children = (
+				3F90429819703187007BBFAF /* DDAntennaLogger */,
 				3F90426F19702C38007BBFAF /* Example */,
 				3F90428819702C39007BBFAF /* ExampleTests */,
 				3F90426819702C38007BBFAF /* Frameworks */,
@@ -151,6 +155,16 @@
 				3F90428B19702C39007BBFAF /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3F90429819703187007BBFAF /* DDAntennaLogger */ = {
+			isa = PBXGroup;
+			children = (
+				3F90429919703187007BBFAF /* DDAntennaLogger.h */,
+				3F90429A19703187007BBFAF /* DDAntennaLogger.m */,
+			);
+			name = DDAntennaLogger;
+			path = ../DDAntennaLogger;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -300,6 +314,7 @@
 			files = (
 				3F90427A19702C39007BBFAF /* AppDelegate.m in Sources */,
 				3F90427619702C39007BBFAF /* main.m in Sources */,
+				3F90429B19703187007BBFAF /* DDAntennaLogger.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
