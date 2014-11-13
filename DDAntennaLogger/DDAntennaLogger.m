@@ -30,9 +30,9 @@
 {
     NSDictionary *logPayload = @{
                                  @"file": logMessage.fileName,
-                                 @"method": logMessage.methodName,
-                                 @"timestamp": logMessage->timestamp,
-                                 @"log-level": @(logMessage->logLevel),
+                                 @"method": logMessage->_message,
+                                 @"timestamp": logMessage->_timestamp,
+                                 @"log-level": @(logMessage->_level),
                                  };
 
     return logPayload;
@@ -42,10 +42,10 @@
 
 - (void)logMessage:(DDLogMessage *)logMessage
 {
-    NSString *logString = logMessage->logMsg;
+    NSString *logString = logMessage->_message;
 
-    if (self->formatter) {
-        logString = [self->formatter formatLogMessage:logMessage];
+    if (self->_logFormatter) {
+        logString = [self->_logFormatter formatLogMessage:logMessage];
     }
 
     if (logString) {
