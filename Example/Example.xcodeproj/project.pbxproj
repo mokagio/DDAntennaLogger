@@ -34,6 +34,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0CB982B847850F54072A99C6 /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.release.xcconfig"; path = "../Pods/Target Support Files/Pods-Example/Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
+		2DD41C3290206089F4FE8EC9 /* Pods-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-Example/Pods-Example.debug.xcconfig"; sourceTree = "<group>"; };
 		3F90426619702C38007BBFAF /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F90426919702C38007BBFAF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3F90426B19702C38007BBFAF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -52,7 +54,6 @@
 		3F90428E19702C39007BBFAF /* ExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExampleTests.m; sourceTree = "<group>"; };
 		3F90429919703187007BBFAF /* DDAntennaLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDAntennaLogger.h; sourceTree = "<group>"; };
 		3F90429A19703187007BBFAF /* DDAntennaLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDAntennaLogger.m; sourceTree = "<group>"; };
-		8361007814D84A0CBCA98049 /* Pods-Example.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.xcconfig"; path = "../Pods/Pods-Example.xcconfig"; sourceTree = "<group>"; };
 		FF6DB6A192FF4915BB3B5B0A /* libPods-Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -89,7 +90,7 @@
 				3F90428819702C39007BBFAF /* ExampleTests */,
 				3F90426819702C38007BBFAF /* Frameworks */,
 				3F90426719702C38007BBFAF /* Products */,
-				8361007814D84A0CBCA98049 /* Pods-Example.xcconfig */,
+				D31F61B613CA635F44527053 /* Pods */,
 			);
 			indentWidth = 4;
 			sourceTree = "<group>";
@@ -165,6 +166,15 @@
 			);
 			name = DDAntennaLogger;
 			path = ../DDAntennaLogger;
+			sourceTree = "<group>";
+		};
+		D31F61B613CA635F44527053 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2DD41C3290206089F4FE8EC9 /* Pods-Example.debug.xcconfig */,
+				0CB982B847850F54072A99C6 /* Pods-Example.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,7 +297,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/../Pods/Pods-Example-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-Example/Pods-Example-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A3D3DAC3DD764BF09B29DB1C /* Check Pods Manifest.lock */ = {
@@ -456,7 +466,7 @@
 		};
 		3F90429319702C39007BBFAF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8361007814D84A0CBCA98049 /* Pods-Example.xcconfig */;
+			baseConfigurationReference = 2DD41C3290206089F4FE8EC9 /* Pods-Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -470,7 +480,7 @@
 		};
 		3F90429419702C39007BBFAF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8361007814D84A0CBCA98049 /* Pods-Example.xcconfig */;
+			baseConfigurationReference = 0CB982B847850F54072A99C6 /* Pods-Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
