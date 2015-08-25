@@ -30,7 +30,6 @@
 {
     NSDictionary *logPayload = @{
                                  @"file": logMessage.fileName,
-                                 @"method": logMessage->_message,
                                  @"timestamp": logMessage->_timestamp,
                                  @"log-level": @(logMessage->_level),
                                  };
