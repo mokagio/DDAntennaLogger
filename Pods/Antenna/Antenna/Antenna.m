@@ -192,13 +192,15 @@ inManagedObjectContext:(NSManagedObjectContext *)context;
                               object:(id)object
 {
     __weak __typeof(self)weakSelf = self;
-    [self startLoggingNotificationName:name object:nil constructingPayLoadFromBlock:^NSDictionary *(NSNotification *notification) {
+    [self startLoggingNotificationName:name object:object constructingPayLoadFromBlock:^NSDictionary *(NSNotification *notification) {
         __strong __typeof(weakSelf)strongSelf = weakSelf;
 
         NSMutableDictionary *mutablePayload = [strongSelf.defaultPayload mutableCopy];
         if (notification.userInfo) {
-            [notification.userInfo enumerateKeysAndObjectsUsingBlock:^(id key, __unused id obj, __unused BOOL *stop) {
-                [mutablePayload setObject:object forKey:key];
+            [notification.userInfo enumerateKeysAndObjectsUsingBlock:^(id key, id obj, __unused BOOL *stop) {
+                if (obj && key) {
+                    [mutablePayload setObject:obj forKey:key];
+                }
             }];
         }
         [mutablePayload setObject:name forKey:@"notification"];
@@ -304,7 +306,7 @@ requestSerializer:(AFHTTPRequestSerializer <AFURLRequestSerialization> *)request
 #pragma mark - AntennaChannel
 
 - (void)log:(NSDictionary *)payload {
-    NSURLRequest *request = [self.requestSerializer requestWithMethod:self.method URLString:[self.URL absoluteString] parameters:payload];
+    NSURLRequest *request = [self.requestSerializer requestWithMethod:self.method URLString:[self.URL absoluteString] parameters:payload error:nil];
     [NSURLConnection sendAsynchronousRequest:request queue:self.operationQueue completionHandler:nil];
 }
 
