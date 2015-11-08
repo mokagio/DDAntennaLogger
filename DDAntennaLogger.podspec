@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "DDAntennaLogger"
-  s.version      = "1.0.0"
+  s.version      = "1.0.1"
   s.summary      = "A custom CocoaLumberjack logger for remote logging through Antenna"
 
   s.description  = <<-DESC
