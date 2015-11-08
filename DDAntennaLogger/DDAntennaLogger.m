@@ -1,5 +1,5 @@
 #import "DDAntennaLogger.h"
-#import <Antenna.h>
+#import "Antenna.h"
 
 @interface DDAntennaLogger ()
 
